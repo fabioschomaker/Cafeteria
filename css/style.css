@@ -1,0 +1,474 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 48px;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins',sans-serif;
+}
+:root{
+    --main-color:#ff9f0d;
+    --text-color:#fff;
+    --other-color:#212121;
+    --second-color:#9e9e9e;
+    --third-color:#464444;
+    --bg-color:#111111;
+
+    --h1-font:60px;
+    --h2-font:40px;
+    --p-font:16px;
+
+    --box-shadow: #ff9f0d 0px 1px 25px;
+}
+body{
+    background: black;
+    color: var(--text-color);
+}
+header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 30px 14%;
+    background: transparent;
+    transition: all 0.50s ease;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 25px;
+    font-weight: 400;
+}
+.logo i{
+    color: var(--main-color);
+    margin-right: 5px;
+    vertical-align: middle;
+    font-size: 40px;
+}
+.navlist{
+    display: flex;
+}
+.navlist a{
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 400;
+    margin: 0 30px;
+    transition: all .50s ease;
+}
+.navlist a:hover{
+    color: var(--main-color);
+        
+}
+.nav-icones{
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 40px;
+    background: var(--main-color);
+    box-shadow: var(--box-shadow);
+}
+.nav-icones i{
+    vertical-align: middle;
+    font-size: 20px;
+    color: var(--bg-color);
+    margin-right: 8px;
+    margin-left: 5px;
+    transition: all .50s ease;
+}
+#icone-menu{
+    position: relative;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--bg-color);
+    z-index: 10001;
+    display: none;
+}
+.nav-icones i:hover{
+    color: var(--text-color);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/********************************************* Fim Header ********************************************/
+section{
+    padding: 70px 14% 60px ;
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/home-img.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.home-texto h1{
+    font-size: var(--h1-font);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+.home-texto p{
+    color: var(--second-color);
+    font-weight: 500;
+    font-size: var(--p-font);
+    margin-bottom: 30px;
+}
+.btn{
+    display: inline-block;
+    background:var(--third-color);
+    color: var(--main-color);
+    padding: 15px 20px;
+    border-radius: 50px 20px 0px 50px;
+    font-size: var(--p-font);
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all .50s ease;
+   
+}
+.btn i{
+    vertical-align: middle;
+    font-size: 22px;
+    margin-left: 5px;
+}
+.btn:hover{
+    box-shadow: var(--box-shadow);
+    color: var(--bg-color);
+    background: var(--main-color);
+}
+header.sticky{
+    padding: 15px 14%;
+    background: var(--other-color);
+    backdrop-filter: blur(35px);
+}
+/********************************************* Fim Home ********************************************/
+.sobre{
+   
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 60px;
+}
+.sobre-img img{
+    width: 100%;
+    height: auto;
+}
+.sobre-texto h2{
+    font-size: var(--h2-font);
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.sobre-texto p{
+    font-size:var(--p-font);
+    color: var(--second-color);
+    line-height: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+/********************************************* Fim Sobre ********************************************/
+
+.center-texto{
+    text-align: center;
+}
+.center-texto h4{
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+.center-texto h2{
+    font-size: var(--h2-font);
+   
+}
+.box-produtos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    align-items: center;
+    margin-top: 50px;
+    gap: 30px;
+}
+.box{
+    position: relative;
+    background: var(--other-color);
+    padding: 10px 35px 40px;
+    border-radius: 30px;
+    margin: auto;
+}
+.box img{
+   width: 100%;
+   height: auto;
+   cursor: pointer;
+   transition: all .50s ease;
+}
+.box h3{
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.box p{
+    font-size: var(--p-font);
+    color: var(--second-color);
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+.box-texto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.box-texto .preco h6{
+    font-size: var(--p-font);
+    font-weight: 300;
+}
+.box-texto .btn-texto a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--third-color);
+    color: var(--main-color); 
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all .50s ease;
+}
+.btn-texto a:hover{
+    color: var(--third-color);
+   background: var(--main-color);   
+   box-shadow: var(--box-shadow);
+}
+.top-icones{
+    position: absolute;
+    top: 30px;
+    left: 35px;
+}
+.top-icones i{
+    color: var(--main-color);
+    font-size: 25px;
+}
+.btn-produtos{
+    text-align: center;
+    margin-top: 50px;
+}
+/********************************************* Fim Produtos ********************************************/
+
+.box-clientes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+    align-items: center;
+    gap: 20px;
+}
+.box-review{
+    background: var(--other-color);
+    padding: 10px 20px;
+    margin-top: 40px;
+    border-radius: 30px;
+}
+.box-review p{
+    color: var(--second-color);
+    font-size: 15px;
+    text-align: justify;
+}
+.review{
+    margin-top: 20px;
+}
+.img-review img{
+    width: 100%;
+    border-radius: 50%;
+}
+.texto-review{
+    text-align: center;
+    margin-top: 20px;
+}
+.texto-review h4{
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--second-color);
+}
+.texto-review h5{
+    font-size: var(--p-font);
+    font-weight: 300;
+}
+.icones-review{
+    text-align: center;
+    margin: 10px 0;
+}
+.icones-review i{
+    font-size: 25px;
+    color: var(--main-color);
+}
+/********************************************* Fim Produtos ********************************************/
+.conainer-contato{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+.contato-text{
+    text-align: center;
+}
+.contato-text h2{
+    font-size: var(--h2-font);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.contato-text p{
+    font-size: var(--p-font);
+    color: var(--second-color);
+    margin-bottom: 40px;
+    max-width: 950px;
+    line-height: 30px;
+}
+.c-social i{
+    display: inline-block;
+    font-size: 35px;
+    color: var(--text-color);
+    margin: 0px 20px;
+    margin-bottom: 30px;
+    transition: all .50s ease;
+}
+.c-social i:hover{
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+.contato-detalhes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+   
+}
+.detalhes a{
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+.detalhes i{
+    vertical-align: middle;
+    font-size: 25px;
+    margin-right: 10px;
+    color: var(--main-color);
+}
+.scrool{
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    border-top: 30px;
+    cursor: pointer;
+}
+.scrool i{
+    font-size: 30px;
+    color: var(--main-color);
+}
+/********************************************* Fim Contato ********************************************/
+
+@media (max-width:1540px){
+    header{
+        padding: 22px 4%;
+        transition: .2s ease;
+    }
+    header.sticky{
+        padding: 14px 4%;
+        background: var(--other-color);
+        backdrop-filter: blur(35px);
+    }
+    section{
+        padding: 50px 4% 40px ;
+        transition: .2s ease;
+    }
+}
+@media (max-width:1180px){
+   :root{
+    --h1-font:50px;
+    --h2-font:30px;
+    --p-font:14px;
+   }
+   .home{
+    height: 85vh;
+   }
+   .box-clientes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+    align-items: center;
+    gap: 20px;
+}
+}
+@media (max-width:1060px){
+    #icone-menu{
+        display: initial;
+    }
+    .navlist{
+        position: absolute;
+        top: -1000px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        background: var(--other-color);
+        transition: all .50s ease;
+    }
+    .navlist a{
+        display: block;
+        padding: 8px;
+        margin: 16px;
+       
+    }
+    .navlist a:hover{
+        border-left: 2px solid var(--main-color);
+        color: var(--main-color);
+    }
+    .navlist.active{
+        top: 100%;
+    }
+    .box-produtos{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+        align-items: center;
+        margin-top: 50px;
+        gap: 20px;
+    }
+}
+@media (max-width:1045px){
+    
+    .sobre-img img{
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+    }
+}
+@media (max-width:960px){
+    .sobre{
+        grid-template-columns:1fr;
+    }
+    .sobre-img {
+        margin: auto;
+    }
+    .sobre-img img{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width:560px){
+    :root{
+        --h1-font:30px;
+        --h2-font:20px;
+        --p-font:14px;
+       }
+}
